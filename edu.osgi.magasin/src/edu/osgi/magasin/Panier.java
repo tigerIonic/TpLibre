@@ -5,6 +5,7 @@ import java.util.Collection;
 import edu.osgi.stock.Produit;
 
 public class Panier {
+	private int idPanier;
 	private Collection<Produit> colProduit;
 	
 	public Panier(){

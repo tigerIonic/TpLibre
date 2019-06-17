@@ -2,7 +2,7 @@ package edu.osgi.magasin;
 
 import java.util.ArrayList;
 
-public class Catalogue {
+public class Catalogue{
 	public ArrayList listeProduit;
 	
 	public Catalogue(){
