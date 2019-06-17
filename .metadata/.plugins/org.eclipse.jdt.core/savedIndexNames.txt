@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+C:\tp_osgi\workspaces\TPlibre\.metadata\.plugins\org.eclipse.jdt.core
+804817098.index
+4045635709.index
+1630310489.index
