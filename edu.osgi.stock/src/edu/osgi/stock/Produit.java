@@ -1,4 +1,4 @@
-package edu.osgi.magasin;
+package edu.osgi.stock;
 
 public class Produit {
 	private int id_produit;
