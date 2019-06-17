@@ -8,3 +8,7 @@
 *.properties
 
 \.idea/
+
+edu\.osgi\.client/bin/
+
+edu\.osgi\.stock/bin/
