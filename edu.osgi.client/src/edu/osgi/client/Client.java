@@ -1,23 +1,14 @@
 package edu.osgi.client;
 
 public class Client {
-<<<<<<< HEAD
 	private int idClient;
-	private String name;
-	
-	public Client(int id, String name){
-		this.idClient=id;
-		this.name=name;
-	}
-=======
-	
+	private String nom;
 	private double porte_monnaie;
 	
-	private String nom;
-	
-	private int id;
-	
-	
+	public Client(int id, String nom, double porte_monnaie){
+		this.idClient=id;
+		this.nom=nom;
+		this.porte_monnaie = porte_monnaie;
+	}
 
->>>>>>> 382ea52fa5fed759e600517aeec4dffeae0af354
 }
