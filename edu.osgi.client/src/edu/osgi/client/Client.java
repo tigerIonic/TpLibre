@@ -10,5 +10,9 @@ public class Client {
 		this.nom=nom;
 		this.porte_monnaie = porte_monnaie;
 	}
+	
+	public void lol(){
+		System.out.println(this.nom);
+	}
 
 }

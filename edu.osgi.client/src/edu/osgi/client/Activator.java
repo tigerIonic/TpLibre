@@ -17,6 +17,11 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
+		System.out.println("Création client 1");
+		Client cl1 = new Client(1, "xabi", 12.1);
+		cl1.lol();
+		System.out.println("Création client 2");
+		Client cl2 = new Client(1, "xabi", 12.1);
 	}
 
 	/*
