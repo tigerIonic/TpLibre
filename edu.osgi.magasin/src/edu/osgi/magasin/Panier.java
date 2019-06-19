@@ -6,6 +6,15 @@ import edu.osgi.stock.Produit;
 
 public class Panier {
 	private int idPanier;
+	
+	public int getIdPanier() {
+		return idPanier;
+	}
+
+	public void setIdPanier(int idPanier) {
+		this.idPanier = idPanier;
+	}
+
 	private Collection<Produit> colProduit;
 	
 	public Panier(){
