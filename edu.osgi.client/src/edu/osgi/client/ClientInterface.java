@@ -1,4 +1,5 @@
 package edu.osgi.client;
+
 import edu.osgi.magasin.Magasin;
 
 public interface ClientInterface {
