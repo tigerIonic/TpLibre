@@ -23,7 +23,7 @@ public class Commande {
 		this.panier = panier;
 	}
 	
-	public void ajoutProduit(String libelle, int quantite) {
+	public void ajoutProduit(String libelle, int quantite) throws Exception {
 		Produit p=Catalogue.getProduit(libelle);
 		p.setQuantite(quantite);
 		getPanier().AddProduit(p);

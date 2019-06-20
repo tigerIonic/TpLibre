@@ -1,5 +1,6 @@
 package edu.osgi.stock;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.osgi.framework.BundleActivator;
@@ -30,7 +31,7 @@ public class Activator implements BundleActivator {
 	}
 	
 	private void initializeStock(){
-		Collection<Produit> collectionProduit = null;
+		Collection<Produit> collectionProduit = new ArrayList<Produit>();
 		collectionProduit.add(new Produit(1,"carotte",1.5,100));
 		collectionProduit.add(new Produit(2,"tomate",1.5,100));
 		collectionProduit.add(new Produit(3,"saucisson",3,100));

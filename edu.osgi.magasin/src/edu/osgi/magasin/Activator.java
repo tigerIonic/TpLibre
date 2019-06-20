@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
 
 
 
@@ -22,6 +23,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
+		System.out.println("magasin actif");
 		
 		
 	}
