@@ -11,7 +11,7 @@ import org.osgi.framework.ServiceRegistration;
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;
-	//private ServiceRegistration<Magasin> myServiceRegistration;
+	
 
 	static BundleContext getContext() {
 		return context;
@@ -24,7 +24,7 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 		System.out.println("magasin actif");
-		//myServiceRegistration = (ServiceRegistration<Magasin>) bundleContext.registerService(Magasin.class.getName(), new Catalogue(), null);
+		
 		
 	}
 
