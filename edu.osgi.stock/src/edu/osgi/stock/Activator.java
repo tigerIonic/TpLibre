@@ -5,6 +5,8 @@ import java.util.Collection;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
+import edu.osgi.api.Produit;
+
 public class Activator implements BundleActivator {
 	
 

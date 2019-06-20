@@ -2,7 +2,7 @@ package edu.osgi.magasin;
 
 import java.util.Collection;
 
-import edu.osgi.stock.Produit;
+import edu.osgi.api.Produit;
 
 public class Panier {
 	private int idPanier;

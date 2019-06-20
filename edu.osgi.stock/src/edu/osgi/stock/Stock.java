@@ -2,6 +2,9 @@ package edu.osgi.stock;
 
 import java.util.Collection;
 
+import edu.osgi.api.ErreurProduit;
+import edu.osgi.api.Produit;
+
 public class Stock {
 	private Collection<Produit> stock;
 	
