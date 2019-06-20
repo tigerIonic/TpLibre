@@ -12,7 +12,7 @@ public class Catalogue{
 		
 	}
 	
-	public Catalogue(ArrayList liste){
+	public Catalogue(Collection<Produit> liste){
 		this.listeProduit=liste;
 	}
 	

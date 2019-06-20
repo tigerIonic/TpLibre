@@ -3,12 +3,15 @@ import edu.osgi.magasin.Magasin;
 
 public class Client implements ClientInterface {
 	private int idClient;
+	public int idCommande;
 
-
+	
 	private String nom;
 	private double porte_monnaie;
 
 	private Magasin magasin;
+	
+
 	
 	public Client(int id, String nom, double porte_monnaie){
 		this.idClient=id;
@@ -16,9 +19,14 @@ public class Client implements ClientInterface {
 		this.porte_monnaie = porte_monnaie;
 	}
 	
-	public void lol(){
-		System.out.println(this.nom);
+	public int getIdCommande() {
+		return idCommande;
 	}
+
+	public void setIdCommande(int idCommande) {
+		this.idCommande = idCommande;
+	}
+	
 
 	@Override
 	public int getIdClient() {
@@ -69,8 +77,8 @@ public class Client implements ClientInterface {
 	}
 
 	@Override
-	public void demanderProduit(String libelle_produit, int quantite){
-		this.getMagasin().getCommande().ajoutProduit(libelle_produit, quantite);
+	public void demanderProduit(String libelle_produit, int quantite) throws Exception{
+		this.getMagasin().getCommande(idCommande).ajoutProduit(libelle_produit, quantite);
 	}
 
 	@Override

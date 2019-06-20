@@ -5,12 +5,13 @@ import java.util.Collection;
 
 import edu.osgi.api.Produit;
 
-public class Magasin implements Imagasin {
+public class Magasin {
 	protected Collection<Commande> commandes;
+	protected Catalogue catalogue;
 
 	
 
-	@Override
+
 	public double getPrixPanier(int idPanier) {
 		double somme=0;
 		for (Commande cmd:commandes){
@@ -24,24 +25,25 @@ public class Magasin implements Imagasin {
 		return somme;
 	}
 
-	@Override
-	public double envoisFacture() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
-	@Override
+	
 	public boolean produitDisponible(int idP, int quant) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
-	public void ajoutProduit(String libelle, int quantite) {
-		// TODO Auto-generated method stub
+	
+	
+	public Commande getCommande(int id) throws Exception{
+		for (Commande com:commandes){
+			if (com.getId_Commande()==id){
+				return com;
+			}
+		};
+		throw new Exception("commande non trouvée");
 		
 	}
-	
 	
 	
 	
