@@ -9,9 +9,19 @@ public class Magasin {
 	protected Collection<Commande> commandes;
 	protected Catalogue catalogue;
 
-	
+	/** Constructeur privé */
+	private Magasin()
+	{}
 
+	/** Instance unique pré-initialisée */
+	private static Magasin INSTANCE = new Magasin();
 
+	/** Point d'accès pour l'instance unique du singleton */
+	public static Magasin getInstance()
+	{   return INSTANCE;
+	}
+
+	@Override
 	public double getPrixPanier(int idPanier) {
 		double somme=0;
 		for (Commande cmd:commandes){
@@ -41,11 +51,14 @@ public class Magasin {
 				return com;
 			}
 		};
-		throw new Exception("commande non trouv�e");
+		throw new Exception("commande non trouv�e");
 		
 	}
-	
-	
-	
+
+	@Override
+	public Imagasin getCommande() {
+		return null;
+	}
+
 
 }
