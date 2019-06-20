@@ -5,15 +5,6 @@ import java.util.Collection;
 import edu.osgi.api.Produit;
 
 public class Panier {
-	private int idPanier;
-	
-	public int getIdPanier() {
-		return idPanier;
-	}
-
-	public void setIdPanier(int idPanier) {
-		this.idPanier = idPanier;
-	}
 
 	private Collection<Produit> colProduit;
 	
@@ -50,12 +41,24 @@ public class Panier {
 	}
 	
 	public void removeProduit(int id){
-		
-		
 		for (Produit produit:colProduit){
 			if (id==produit.getId_produit()){
 				this.colProduit.remove(produit);
 			}
+		}
 	}
-	}}
+	public void afficherPanier() {
+		for (Produit produit:colProduit){
+			System.out.println(produit.getLibelle() + " x " + produit.getQuantite() + " = " + produit.getPrix()*produit.getQuantite());
+		}
+	}
+
+	public double getPrixPanier() {
+		double res = 0;
+		for (Produit p:getColProduit()) {
+			res += p.getPrix()*p.getQuantite();
+		}
+		return res;
+	}
+}
 

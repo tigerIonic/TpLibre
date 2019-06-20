@@ -6,6 +6,24 @@ import edu.osgi.api.Produit;
 public class Commande {
 	private int Id_Commande;
 	private Panier panier;
+	private int idClient;
+	private boolean commandeReglee;
+
+	public Commande(int id_Commande, int idClient, boolean commandeReglee) {
+		Id_Commande = id_Commande;
+		this.panier = new Panier();
+		this.idClient = idClient;
+		this.commandeReglee = commandeReglee;
+	}
+
+	public int getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(int idClient) {
+		this.idClient = idClient;
+	}
+
 	
 	public int getId_Commande() {
 		return Id_Commande;
@@ -29,6 +47,14 @@ public class Commande {
 		getPanier().AddProduit(p);
 		
 	}
-	
+
+	public void afficherCommande() {
+		System.out.println("Commande passée : \n<===================>");
+		this.panier.afficherPanier();
+		System.out.println("<===================>");
+	}
+	public double getPrixCommande() {
+		return this.panier.getPrixPanier();
+	}
 	
 }

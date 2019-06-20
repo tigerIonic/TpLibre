@@ -5,7 +5,7 @@ import edu.osgi.magasin.Magasin;
 public interface Iclient {
 	
 	public void demanderProduit(String libelle_produit, int quantite);
-	public void passerCommande(double prixPanier) throws Exception;
+	public void payerTransaction(double prixPanier) throws Exception;
 
 	public int getIdClient();
 	public void setIdClient(int idClient);

@@ -57,7 +57,7 @@ public class Client implements Iclient {
 	}
 
 	@Override
-	public void passerCommande(double prixPanier) throws Exception {
+	public void payerTransaction(double prixPanier) throws Exception {
 		if(this.getPorte_monnaie() <= prixPanier){
 			new ClientException("Porte monnaie inférieur au prix du panier");
 		}
