@@ -21,7 +21,7 @@ public class Activator implements BundleActivator {
 		Client cl1 = new Client(1, "xabi", 12.1);
 		cl1.setIdCommande(1);
 		System.out.println("Création client 2");
-		Client cl2 = new Client(1, "xabi", 12.1);
+		Client cl2 = new Client(2, "Gaétan", 12.1);
 		cl2.setIdCommande(2);
 	}
 
