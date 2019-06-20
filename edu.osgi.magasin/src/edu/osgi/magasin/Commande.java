@@ -9,11 +9,11 @@ public class Commande {
 	private int idClient;
 	private boolean commandeReglee;
 
-	public Commande(int id_Commande, int idClient, boolean commandeReglee) {
+	public Commande(int id_Commande, int idClient) {
 		Id_Commande = id_Commande;
 		this.panier = new Panier();
 		this.idClient = idClient;
-		this.commandeReglee = commandeReglee;
+		this.commandeReglee = false;
 	}
 
 	public int getIdClient() {
@@ -55,6 +55,9 @@ public class Commande {
 	}
 	public double getPrixCommande() {
 		return this.panier.getPrixPanier();
+	}
+	public void reglerCommande() {
+		this.commandeReglee = true;
 	}
 	
 }

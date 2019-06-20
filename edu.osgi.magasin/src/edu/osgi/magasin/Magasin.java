@@ -33,6 +33,7 @@ public class Magasin {
 			}
 		}
 		this.clients.add(client);
+		this.commandes.add(new Commande(this.commandes.size(), client.getIdClient()));
 	}
 
 	
@@ -57,6 +58,8 @@ public class Magasin {
 		for (Commande com:commandes){
 			if (com.getIdClient()==idClient){
 				this.getClient(idClient).payerTransaction(com.getPrixCommande());
+				com.afficherCommande();
+				com.reglerCommande();
 			}
 		}
 		throw new Exception("Pas de commande associée à ce client");
