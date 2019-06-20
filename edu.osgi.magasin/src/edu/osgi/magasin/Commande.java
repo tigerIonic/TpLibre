@@ -1,17 +1,21 @@
 package edu.osgi.magasin;
 
-import edu.osgi.client.Client;
+import edu.osgi.api.Produit;
+
 
 public class Commande {
-	private Client client;
+	private int Id_Commande;
 	private Panier panier;
 	
-	public Client getClient() {
-		return client;
+	public int getId_Commande() {
+		return Id_Commande;
 	}
-	public void setClient(Client client) {
-		this.client = client;
+	public void setId_Commande(int id_Commande) {
+		Id_Commande = id_Commande;
 	}
+	
+	
+	
 	public Panier getPanier() {
 		return panier;
 	}
@@ -19,6 +23,12 @@ public class Commande {
 		this.panier = panier;
 	}
 	
+	public void ajoutProduit(String libelle, int quantite) {
+		Produit p=Catalogue.getProduit(libelle);
+		p.setQuantite(quantite);
+		getPanier().AddProduit(p);
+		
+	}
 	
 	
 }

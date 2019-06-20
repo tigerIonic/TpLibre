@@ -70,7 +70,7 @@ public class Client implements ClientInterface {
 
 	@Override
 	public void demanderProduit(String libelle_produit, int quantite){
-		this.getMagasin().ajoutProduit(libelle_produit, quantite);
+		this.getMagasin().getCommande().ajoutProduit(libelle_produit, quantite);
 	}
 
 	@Override

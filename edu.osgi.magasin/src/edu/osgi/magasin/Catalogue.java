@@ -1,9 +1,12 @@
 package edu.osgi.magasin;
 
 import java.util.ArrayList;
+import java.util.Collection;
+
+import edu.osgi.api.Produit;
 
 public class Catalogue{
-	public ArrayList listeProduit;
+	public Collection<Produit> listeProduit;
 	
 	public Catalogue(){
 		
@@ -13,10 +16,14 @@ public class Catalogue{
 		this.listeProduit=liste;
 	}
 	
-	public void getListe(){
-		for (int index=0;index<this.listeProduit.size();index++){
-			this.listeProduit.get(index);
+	public Produit getProduit(String libelle) throws Exception{
+		
+		for (Produit p:listeProduit){
+			if (p.getLibelle().equals(libelle)){
+				return p;
+			}
 		}
+		throw new Exception("produit non trouvé");
 	}
 	
 }
