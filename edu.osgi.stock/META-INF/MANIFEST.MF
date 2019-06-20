@@ -5,5 +5,6 @@ Bundle-SymbolicName: edu.osgi.stock
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.osgi.stock.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: org.osgi.framework;version="1.3.0"
+Import-Package: edu.osgi.magasin,
+ org.osgi.framework;version="1.3.0"
 Export-Package: edu.osgi.stock

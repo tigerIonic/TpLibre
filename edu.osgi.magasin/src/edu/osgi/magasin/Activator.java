@@ -1,7 +1,12 @@
 package edu.osgi.magasin;
 
+import java.util.Collection;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+
+import edu.osgi.stock.Produit;
+import edu.osgi.stock.Stock;
 
 public class Activator implements BundleActivator {
 
@@ -28,8 +33,6 @@ public class Activator implements BundleActivator {
 		Activator.context = null;
 	}
 	
-	private void initializeStock(){
-		
-	}
+
 
 }
