@@ -4,12 +4,27 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import edu.osgi.api.Produit;
+import edu.osgi.stock.Stock;
 
 public class Catalogue{
 	public static Collection<Produit> listeProduit;
 	
-	public Catalogue(){
-		
+	/** Constructeur privé */
+	private Catalogue()
+	{
+		this.listeProduit=Stock.getStock();
+		for (Produit pro:listeProduit){
+			pro.setQuantite(0);
+		}
+		System.out.println("catalogue cr��");
+	}
+
+	/** Instance unique pré-initialisée */
+	private static Catalogue INSTANCE = new Catalogue();
+
+	/** Point d'accès pour l'instance unique du singleton */
+	public static Catalogue getInstance()
+	{   return INSTANCE;
 	}
 	
 	public Catalogue(Collection<Produit> liste){

@@ -11,7 +11,7 @@ public class Magasin {
 
 	/** Constructeur privÃ© */
 	private Magasin()
-	{}
+	{System.out.println("magasin créé");}
 
 	/** Instance unique prÃ©-initialisÃ©e */
 	private static Magasin INSTANCE = new Magasin();

@@ -24,6 +24,8 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 		System.out.println("magasin actif");
+		Magasin.getInstance();
+		Catalogue.getInstance();
 		
 		
 	}

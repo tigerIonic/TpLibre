@@ -8,11 +8,20 @@ import edu.osgi.api.Produit;
 
 
 public class Stock {
-	private Collection<Produit> stock=new ArrayList<Produit>();
+	private static Collection<Produit> stock=new ArrayList<Produit>();
 	
+	public static Collection<Produit> getStock() {
+		return stock;
+	}
+
+	public void setStock(Collection<Produit> stock) {
+		this.stock = stock;
+	}
+
 	/** Constructeur privÃ© */
 	private Stock()
 	{
+		System.out.println("stock créé");
 		stock.add(new Produit(1,"carotte",1.5,100));
 		stock.add(new Produit(2,"tomate",1.5,100));
 		stock.add(new Produit(3,"saucisson",3,100));
