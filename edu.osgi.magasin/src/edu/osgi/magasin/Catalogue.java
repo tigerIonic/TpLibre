@@ -6,7 +6,7 @@ import java.util.Collection;
 import edu.osgi.api.Produit;
 
 public class Catalogue{
-	public Collection<Produit> listeProduit;
+	public static Collection<Produit> listeProduit;
 	
 	public Catalogue(){
 		
@@ -16,7 +16,7 @@ public class Catalogue{
 		this.listeProduit=liste;
 	}
 	
-	public Produit getProduit(String libelle) throws Exception{
+	public static Produit getProduit(String libelle) throws Exception{
 		
 		for (Produit p:listeProduit){
 			if (p.getLibelle().equals(libelle)){

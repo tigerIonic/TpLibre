@@ -4,7 +4,7 @@ import edu.osgi.magasin.Magasin;
 
 public interface ClientInterface {
 	
-	public void demanderProduit(String libelle_produit, int quantite);
+	public void demanderProduit(String libelle_produit, int quantite) throws Exception;
 	public void enregistrerMagasin(Magasin magasin);
 	public boolean magasinEnregistrer();
 	public void passerCommande(double prixPanier) throws Exception;
