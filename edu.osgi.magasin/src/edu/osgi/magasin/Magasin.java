@@ -8,7 +8,17 @@ import edu.osgi.api.Produit;
 public class Magasin implements Imagasin {
 	protected Collection<Commande> commandes;
 
-	
+	/** Constructeur privé */
+	private Magasin()
+	{}
+
+	/** Instance unique pré-initialisée */
+	private static Magasin INSTANCE = new Magasin();
+
+	/** Point d'accès pour l'instance unique du singleton */
+	public static Magasin getInstance()
+	{   return INSTANCE;
+	}
 
 	@Override
 	public double getPrixPanier(int idPanier) {
@@ -41,9 +51,11 @@ public class Magasin implements Imagasin {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
-	
+
+	@Override
+	public Imagasin getCommande() {
+		return null;
+	}
+
 
 }
