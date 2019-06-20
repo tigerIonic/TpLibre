@@ -21,7 +21,6 @@ public class Magasin {
 	{   return INSTANCE;
 	}
 
-	@Override
 	public double getPrixPanier(int idPanier) {
 		double somme=0;
 		for (Commande cmd:commandes){
@@ -55,7 +54,7 @@ public class Magasin {
 		
 	}
 
-	@Override
+	
 	public Imagasin getCommande() {
 		return null;
 	}

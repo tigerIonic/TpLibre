@@ -65,7 +65,8 @@ public class Client implements Iclient {
 	}
 
 	@Override
-		Magasin.getInstance().getCommande().ajoutProduit(libelle_produit, quantite);
+		
 	public void demanderProduit(String libelle_produit, int quantite){
+		Magasin.getInstance().getCommande().ajoutProduit(libelle_produit, quantite);
 	}
 }
