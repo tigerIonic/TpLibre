@@ -9,5 +9,5 @@ public interface Imagasin {
 
     void ajoutProduit(String libelle, int quantite);
 
-    Imagasin getCommande();
+    Commande getCommande();
 }
