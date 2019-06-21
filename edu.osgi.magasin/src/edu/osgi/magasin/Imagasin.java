@@ -29,4 +29,6 @@ public interface Imagasin {
     Catalogue getCatalogue();
 
     void setCatalogue(Catalogue catalogue);
+
+	void ajoutProduit(String libelle_produit, int quantite);
 }

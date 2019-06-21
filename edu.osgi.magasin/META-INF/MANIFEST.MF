@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.osgi.magasin.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: edu.osgi.api,
+ edu.osgi.client,
  edu.osgi.stock,
  org.osgi.framework;version="1.3.0"
 Export-Package: edu.osgi.magasin
