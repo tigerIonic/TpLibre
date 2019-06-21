@@ -7,6 +7,10 @@ public interface Iclient {
 	public void demanderProduit(String libelle_produit, int quantite);
 	public void payerTransaction(double prixPanier) throws Exception;
 
+	int getIdCommande();
+
+	void setIdCommande(int idCommande);
+
 	public int getIdClient();
 	public void setIdClient(int idClient);
 

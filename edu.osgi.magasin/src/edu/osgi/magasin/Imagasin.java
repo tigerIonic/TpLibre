@@ -1,13 +1,32 @@
 package edu.osgi.magasin;
 
-public interface Imagasin {
-    double getPrixPanier(int idPanier);
+import edu.osgi.client.Iclient;
 
-    double envoisFacture();
+import java.util.Collection;
+
+public interface Imagasin {
+
+    void enregistrerClient(Iclient client) throws Exception;
 
     boolean produitDisponible(int idP, int quant);
 
-    void ajoutProduit(String libelle, int quantite);
+    Commande getCommande(int id) throws Exception;
 
-    Commande getCommande();
+    void realiserTransaction(int idClient) throws Exception;
+
+    Imagasin getCommande();
+
+    Collection<Commande> getCommandes();
+
+    void setCommandes(Collection<Commande> commandes);
+
+    Collection<Iclient> getClients();
+
+    Iclient getClient(int idClient) throws Exception;
+
+    void setClients(Collection<Iclient> clients);
+
+    Catalogue getCatalogue();
+
+    void setCatalogue(Catalogue catalogue);
 }

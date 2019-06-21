@@ -3,14 +3,13 @@ package edu.osgi.magasin;
 
 import java.util.Collection;
 
-import edu.osgi.api.Produit;
-import edu.osgi.client.Client;
+import edu.osgi.client.Iclient;
 
-public class Magasin {
+public class Magasin implements Imagasin{
 	protected Collection<Commande> commandes;
 
 
-	protected Collection<Client> clients;
+	protected Collection<Iclient> clients;
 	protected Catalogue catalogue;
 
 	/** Constructeur privé */
@@ -24,8 +23,10 @@ public class Magasin {
 	public static Magasin getInstance()
 	{   return INSTANCE;
 	}
-	public void enregistrerClient(Client client) throws Exception {
-		for (Client cli:clients){
+
+	@Override
+	public void enregistrerClient(Iclient client) throws Exception {
+		for (Iclient cli:clients){
 			if (cli == client) {
 				throw new Exception("Impossible d'enregistrer ce client : Client déjà exitant.");
 			} else if (cli.getIdClient() == client.getIdClient()) {
@@ -36,14 +37,14 @@ public class Magasin {
 		this.commandes.add(new Commande(this.commandes.size(), client.getIdClient()));
 	}
 
-	
+	@Override
 	public boolean produitDisponible(int idP, int quant) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	
-	
+	@Override
 	public Commande getCommande(int id) throws Exception{
 		for (Commande com:commandes){
 			if (com.getId_Commande()==id){
@@ -54,6 +55,7 @@ public class Magasin {
 		
 	}
 
+	@Override
 	public void realiserTransaction(int idClient) throws Exception {
 		for (Commande com:commandes){
 			if (com.getIdClient()==idClient){
@@ -65,27 +67,31 @@ public class Magasin {
 		throw new Exception("Pas de commande associée à ce client");
 	}
 
-	
+	@Override
 	public Imagasin getCommande() {
 		// TODO
 		return null;
 	}
 
-
+	@Override
 	public Collection<Commande> getCommandes() {
 		return commandes;
 	}
 
+	@Override
 	public void setCommandes(Collection<Commande> commandes) {
 		this.commandes = commandes;
 	}
 
-	public Collection<Client> getClients() {
+	@Override
+	public Collection<Iclient> getClients() {
 		return clients;
 	}
-	public Client getClient(int idClient) throws Exception {
-		Client res = null;
-		for (Client cli:clients) {
+
+	@Override
+	public Iclient getClient(int idClient) throws Exception {
+		Iclient res = null;
+		for (Iclient cli:clients) {
 			if(cli.getIdClient() == idClient) {
 				res = cli;
 			}
@@ -97,14 +103,17 @@ public class Magasin {
 		}
 	}
 
-	public void setClients(Collection<Client> clients) {
+	@Override
+	public void setClients(Collection<Iclient> clients) {
 		this.clients = clients;
 	}
 
+	@Override
 	public Catalogue getCatalogue() {
 		return catalogue;
 	}
 
+	@Override
 	public void setCatalogue(Catalogue catalogue) {
 		this.catalogue = catalogue;
 	}

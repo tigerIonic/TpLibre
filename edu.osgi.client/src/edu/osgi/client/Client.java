@@ -16,11 +16,13 @@ public class Client implements Iclient {
 		this.nom=nom;
 		this.porte_monnaie = porte_monnaie;
 	}
-	
+
+	@Override
 	public int getIdCommande() {
 		return idCommande;
 	}
 
+	@Override
 	public void setIdCommande(int idCommande) {
 		this.idCommande = idCommande;
 	}
