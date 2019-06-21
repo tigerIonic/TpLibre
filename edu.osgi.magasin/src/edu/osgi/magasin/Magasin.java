@@ -43,7 +43,7 @@ public class Magasin implements Imagasin{
 		return false;
 	}
 
-	
+
 	@Override
 	public Commande getCommande(int id) throws Exception{
 		for (Commande com:commandes){
@@ -52,7 +52,17 @@ public class Magasin implements Imagasin{
 			}
 		}
 		throw new Exception("commande non trouvée");
-		
+
+	}
+	@Override
+	public Commande getCommandeByClient(int idClient) throws Exception{
+		for (Commande com:commandes){
+			if (com.getIdClient()==idClient){
+				return com;
+			}
+		}
+		throw new Exception("Pas de commande trouvée pour ce client");
+
 	}
 
 	@Override
@@ -116,6 +126,11 @@ public class Magasin implements Imagasin{
 	@Override
 	public void setCatalogue(Catalogue catalogue) {
 		this.catalogue = catalogue;
+	}
+
+	@Override
+	public void ajoutProduit(String libelle_produit, int quantite) {
+
 	}
 
 }

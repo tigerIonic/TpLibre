@@ -12,6 +12,8 @@ public interface Imagasin {
 
     Commande getCommande(int id) throws Exception;
 
+    Commande getCommandeByClient(int idClient) throws Exception;
+
     void realiserTransaction(int idClient) throws Exception;
 
     Imagasin getCommande();
