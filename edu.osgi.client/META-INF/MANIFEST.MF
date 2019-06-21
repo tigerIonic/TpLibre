@@ -5,6 +5,7 @@ Bundle-SymbolicName: edu.osgi.client
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.osgi.client.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: edu.osgi.magasin,
+Import-Package: edu.osgi.api,
+ edu.osgi.magasin,
  org.osgi.framework;version="1.3.0"
 Export-Package: edu.osgi.client
