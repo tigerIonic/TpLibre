@@ -13,15 +13,16 @@ public class Magasin implements Imagasin{
 	protected Catalogue catalogue;
 
 	/** Constructeur privé */
-	private Magasin()
-	{System.out.println("magasin cr��");}
+	private Magasin() {
+		System.out.println("magasin cr��");
+	}
 
 	/** Instance unique pré-initialisée */
 	private static Magasin INSTANCE = new Magasin();
 
 	/** Point d'accès pour l'instance unique du singleton */
-	public static Magasin getInstance()
-	{   return INSTANCE;
+	public static Magasin getInstance() {
+		return INSTANCE;
 	}
 
 	@Override
